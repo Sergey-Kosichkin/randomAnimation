@@ -15,10 +15,10 @@ class ViewController: UIViewController {
     
     private var parameters = Animation.getAnimation()
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        // Do any additional setup after loading the view.
-//    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateAnimationTF()
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         springAnimationView.layer.cornerRadius = 10
@@ -32,6 +32,26 @@ class ViewController: UIViewController {
         springAnimationView.duration = CGFloat(parameters.3)
         springAnimationView.delay = CGFloat(parameters.4)
         springAnimationView.animate()
+        
+        _ = Animation.getAnimation()
+        updateAnimationTF()
+        springAnimationButton.setTitle("run \(parameters.0)", for: .normal)
     }
 }
 
+extension ViewController {
+    
+    private func roundToString(_ number: Double) -> String{
+        String(format: "%.2f", number)
+    }
+    
+    private func updateAnimationTF() {
+        springAnimationLabel.text = """
+            preset: \(parameters.0)
+            curve: \(parameters.1)
+            force: \(roundToString(parameters.2))
+            duration: \(roundToString(parameters.3))
+            delay: \(roundToString(parameters.4))
+            """
+    }
+}
