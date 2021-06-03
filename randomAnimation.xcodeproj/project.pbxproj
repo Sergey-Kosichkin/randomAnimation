@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		F13C684A2668869D00738950 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13C68482668869D00738950 /* Main.storyboard */; };
 		F13C684C2668869E00738950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13C684B2668869E00738950 /* Assets.xcassets */; };
 		F13C684F2668869E00738950 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F13C684D2668869E00738950 /* LaunchScreen.storyboard */; };
+		F13C685726688DF600738950 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C685626688DF600738950 /* Animation.swift */; };
+		F13C68592668933B00738950 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13C68582668933B00738950 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		F13C684B2668869E00738950 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F13C684E2668869E00738950 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F13C68502668869E00738950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F13C685626688DF600738950 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		F13C68582668933B00738950 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		FBDF6E2A174EEDA7675B98CD /* Pods-randomAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-randomAnimation.debug.xcconfig"; path = "Target Support Files/Pods-randomAnimation/Pods-randomAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,10 +75,12 @@
 		F13C68412668869D00738950 /* randomAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				F13C68582668933B00738950 /* DataManager.swift */,
 				F13C68422668869D00738950 /* AppDelegate.swift */,
 				F13C68442668869D00738950 /* SceneDelegate.swift */,
 				F13C68462668869D00738950 /* ViewController.swift */,
 				F13C68482668869D00738950 /* Main.storyboard */,
+				F13C685626688DF600738950 /* Animation.swift */,
 				F13C684B2668869E00738950 /* Assets.xcassets */,
 				F13C684D2668869E00738950 /* LaunchScreen.storyboard */,
 				F13C68502668869E00738950 /* Info.plist */,
@@ -88,7 +94,6 @@
 				FBDF6E2A174EEDA7675B98CD /* Pods-randomAnimation.debug.xcconfig */,
 				8407293FD4F7C111919CD0F0 /* Pods-randomAnimation.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -206,6 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F13C685726688DF600738950 /* Animation.swift in Sources */,
+				F13C68592668933B00738950 /* DataManager.swift in Sources */,
 				F13C68472668869D00738950 /* ViewController.swift in Sources */,
 				F13C68432668869D00738950 /* AppDelegate.swift in Sources */,
 				F13C68452668869D00738950 /* SceneDelegate.swift in Sources */,
@@ -359,6 +366,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HW5V2H79D4;
 				INFOPLIST_FILE = randomAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,6 +387,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HW5V2H79D4;
 				INFOPLIST_FILE = randomAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
